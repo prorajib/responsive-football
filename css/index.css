@@ -1,0 +1,261 @@
+/*--------------- Importing Fonts-------------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+
+/*----------- Custom Variables color, font and shadow --------------*/
+
+:root {
+  --color-primary: #2d25a0;
+  --color-text: #6c6c6c;
+  --color-btn: #c51254;
+
+  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  --font-primary: "Poppins", sans-serif;
+}
+
+
+/*---------------- Initial CSS ----------------*/
+
+
+html {
+  
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* 600px / 16px = 37.5em */
+@media only screen and (max-width: 37.5em) {
+  /* 1rem = 8px / 16px = 50% */
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  color: var(--color-text);
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+a,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
+
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/*------------------  CSS for Reuses ---------------*/
+.heading-primary {
+  color: #ffffff;
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.heading-secondary {
+  color: #18191f;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.btn {
+  background-color: var(--color-btn);
+  color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.big-b:hover{
+  transform: scale(1.5);
+  transition: 0.5s ease-in-out;
+}
+.btn-round {
+  border-radius: 5rem;
+}
+.btn i {
+  margin-left: 1rem;
+ 
+}
+
+header > *,
+main > *,
+footer > * {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/*-------------------- Banner Section-------------------*/
+
+header {
+  background-color: var(--color-primary);
+}
+.top__banner {
+  padding: 10rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 5rem;
+  place-items: center;
+}
+.banner__content {
+  display: grid;
+  gap: 2.5rem;
+  justify-items: start;
+}
+
+.ban-img:hover{
+  transform: scale(2);
+  transform: rotate(360deg);
+  transition: 2s;
+}
+
+
+/*------------------ Players Section--------------------*/
+.Players-container {
+  margin: 8rem auto;
+  padding: 0 2.5rem;
+}
+.players {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  gap: 2.5rem;
+}
+.player {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 2.5rem;
+}
+.player__image img {
+  border-radius: 0.5rem;
+}
+.player__details {
+  display: grid;
+  gap: 1rem;
+}
+/*---------------- Copa 2021 Final highlight Section-----------------*/
+.highlight-section{
+  
+    position: relative;
+    width: 90%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  
+}
+.final-highlight iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.highlight-txt{
+  font-size: 4rem;
+  color:black;
+  text-align: center;
+  margin-bottom: 40px;
+  transition: 1s ease;
+}
+.highlight-txt:hover{
+  transform: scale(1.5);
+}
+
+/*---------------- Upcoming Tournaments Section-----------------*/
+
+.tournaments-container {
+  margin: 8rem auto;
+  padding: 0 2.5rem;
+}
+.tournaments {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  gap: 2.5rem;
+}
+.tournament {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 2.5rem;
+  transition: 1s ease;
+}
+.tournament:hover{
+  transform: scale(1.1);
+}
+.tournament__img img {
+  border-radius: 0.5rem;
+}
+.tournament__info {
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+}
+
+
+/*--------------------- Footer Section-----------------*/
+.footer-container {
+  margin: 5rem auto;
+  display: grid;
+  place-content: center;
+  gap: 1.5rem;
+}
+.footer__logo {
+  height: 10rem;
+  margin-right: 10rem;
+}
+.footer__social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.footer__social-icon {
+  font-size: 2rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: #dddddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text);
+  transition: 0.2s;
+}
+.footer__social-icon:hover {
+  background-color: var(--color-text);
+  color: #dddddd;
+  transform: rotate(360deg);
+}
+.footer__copyright {
+  font-size: 1.8rem;
+  color: #000000;
+  text-align: center;
+}
